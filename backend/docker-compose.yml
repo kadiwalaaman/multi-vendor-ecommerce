@@ -20,7 +20,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres123
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -31,20 +31,3 @@ services:
 
 volumes:
   postgres_data:
-```
-
-Save with **⌘ + S**
-
----
-
-Now open `.dockerignore` and paste:
-```
-venv/
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-.env
-.git/
-.gitignore
-*.md
