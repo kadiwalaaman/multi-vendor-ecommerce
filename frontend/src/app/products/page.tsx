@@ -21,7 +21,7 @@ const [sortBy, setSortBy] = useState('default');
 useEffect(() => { fetchProducts(); }, []);
 const fetchProducts = async (searchTerm = '') => {
 try {
-const res = await API.get(/products/?search=${searchTerm});
+const res = await API.get(`/products/?search=${searchTerm}`);
 setProducts(res.data);
 } catch (err) {
 console.error(err);
