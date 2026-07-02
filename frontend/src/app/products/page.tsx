@@ -29,9 +29,9 @@ console.error(err);
 setLoading(false);
 }
 };
-const res = await API.get(`/products/?search=${searchTerm}`);
-e.preventDefault();
-fetchProducts(search);
+const handleSearch = (e: React.FormEvent) => {
+  e.preventDefault();
+  fetchProducts(search);
 };
 const handleLogout = () => { logout(); router.push('/login'); };
 const addToCart = (product: Product) => {
