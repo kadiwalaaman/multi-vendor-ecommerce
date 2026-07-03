@@ -196,12 +196,12 @@ export default function CheckoutPage() {
 
                 {/* Payment Method */}
                 <div className="bg-white rounded-2xl shadow-sm p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-5">💳 Payment Method</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-5"> Payment Method</h3>
                   <div className="space-y-3">
                     <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition ${form.paymentMethod === 'cod' ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-gray-300'}`}>
                       <input type="radio" name="paymentMethod" value="cod" checked={form.paymentMethod === 'cod'} onChange={handleChange} className="accent-blue-600" />
                       <div>
-                        <p className="font-medium text-gray-900">💵 Cash on Delivery</p>
+                        <p className="font-medium text-gray-900"> Cash on Delivery</p>
                         <p className="text-sm text-gray-500">Pay when your order arrives</p>
                       </div>
                     </label>
@@ -223,7 +223,7 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {/* Right: Order Summary */}
+            
               <div className="lg:col-span-1">
                 <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-5">🧾 Order Summary</h3>
