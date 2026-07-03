@@ -263,12 +263,14 @@ export default function CheckoutPage() {
                   )}
 
                   <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full mt-6 bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 disabled:opacity-50 transition"
-                  >
-                    {loading ? 'Placing Order...' : `Place Order • ₹${cartTotal.toLocaleString()}`}
-                  </button>
+  onClick={() => {
+    localStorage.setItem('checkout_cart', JSON.stringify(cart));
+    router.push('/checkout');
+  }}
+  className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 text-lg"
+>
+  Proceed to Checkout →
+</button>
                   <p className="text-center text-xs text-gray-400 mt-3">🔒 Secure & encrypted checkout</p>
                 </div>
               </div>
